@@ -48,11 +48,3 @@ func main() {
 
 	log.Fatal(app.Listen(":" + os.Getenv("PORT")))
 }
-
-func envChecks() {
-	port, portExist := os.LookupEnv("PORT")
-
-	if !portExist || port == "" {
-		log.Fatal("PORT must be set in .env and not empty")
-	}
-}
